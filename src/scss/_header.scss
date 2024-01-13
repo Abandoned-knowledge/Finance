@@ -1,0 +1,160 @@
+@import "./mixins";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__wrapper {
+    padding: 25px 0px;
+  }
+}
+
+.menu {
+  display: flex;
+  gap: 30px;
+  &__item {
+    text-decoration: none;
+    color: $colorGrey;
+    position: relative;
+    @include underlineAnimation($colorGrey);
+  }
+
+  &__item--selected {
+    color: $colorDark;
+    &::after {
+      background-color: $colorDark;
+      scale: 1;
+    }
+  }
+
+  &__icon {
+    fill: $colorGrey;
+  }
+
+  &__item--selected &__icon {
+    fill: $colorDark;
+  }
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.account-btns {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  &__login {
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid $colorDark;
+    position: relative;
+    font-family: inherit;
+    padding: 10px 25px;
+    transition: all 0.3s ease;
+    color: $colorDark;
+
+    &:hover {
+      color: $colorLight;
+      background-color: $colorDark;
+    }
+  }
+
+  &__register {
+    cursor: pointer;
+    border: 1px solid $colorDark;
+    background-color: $colorDark;
+    color: $colorLight;
+    padding: 10px 25px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+
+    &:hover {
+      color: $colorDark;
+      background-color: $colorLight;
+    }
+  }
+}
+.profile {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+
+  &__main {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .profile__dropdown {
+      transition: 0.3s ease;
+    }
+  }
+
+  &__additional {
+    opacity: 0;
+    visibility: hidden;
+    cursor: auto;
+    position: absolute;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    top: 50px;
+    right: 0;
+    width: max-content;
+    padding: 20px 40px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+
+    hr {
+        width: 200%;
+        translate: -30%;
+        height: 1px;
+        background-color: $colorGrey;
+        border: none;
+    } 
+
+    .profile__dropdown {
+      rotate: -90deg;
+      transition: all 0.25s ease;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__link {
+    color: $colorDark;
+    text-decoration: none;
+    position: relative;
+    width: fit-content;
+    @include underlineAnimation($colorDark);
+    &:hover {
+      & > .profile__dropdown {
+        translate: 100%;
+      }
+    }
+
+    &:last-child {
+      color: $colorRed;
+      @include underlineAnimation($colorRed);
+    }
+  }
+}
+
+.profile_open {
+  .profile__additional {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .profile__main {
+    .profile__dropdown {
+        rotate: 180deg;
+    }
+  }
+}
