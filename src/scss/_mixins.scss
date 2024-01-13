@@ -1,16 +1,30 @@
-@mixin underlineAnimation($mixinColor) {
-    &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background-color: $mixinColor;
-        transition: all 0.3s ease;
-        scale: 0;
-      }
-      &:hover::after {
-        scale: 1;
-      }
+@mixin dynamicMenuLinkUnderline() {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+    bottom: 0;
+    left: 0;
+    scale: 0;
+    transition: $trans;
+
+  }
+  &:hover::after {
+    scale: 1;
+  }
+}
+@mixin staticMenuLinkUnderline() {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+    bottom: 0;
+    left: 0;
+    scale: 1;
+    transition: $trans;
+  }
 }

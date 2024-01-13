@@ -1,0 +1,36 @@
+.nav-btns {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  &__button {
+    font-family: inherit;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 0;
+    border: 1px solid $colorDark;
+    transition: $trans;
+    font-size: 20px;
+  }
+
+  &__login {
+    border: 1px solid $colorLight;
+    background-color: $colorLight;
+
+    &:hover {
+      color: $colorLight;
+      background-color: $colorDark;
+      border: 1px solid $colorDark;
+    }
+  }
+
+  &__register {
+    color: $colorLight;
+    background-color: $colorDark;
+
+    &:hover {
+      color: $colorDark;
+      background-color: $colorLight;
+    }
+  }
+}

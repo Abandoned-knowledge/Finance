@@ -1,50 +1,48 @@
-<header class="header header__wrapper">
+<header class="header">
     <nav class="menu">
-        <a href="expenses.html" class="menu__item">Расходы</a>
-        <a href="income.html" class="menu__item">Доходы</a>
-        <a href="reports.html" class="menu__item">
-            Отчёты 
-            <svg class="menu__icon" fill="black" xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9">
-                <path d="M0.5 2.37868L1.91421 0.964462L7.57107 6.62132L6.15685 8.03553L0.5 2.37868Z" />
-                <path d="M10.3995 0.964462L11.8137 2.37868L6.15685 8.03553L4.74264 6.62132L10.3995 0.964462Z" />
-            </svg> 
-        </a>
+        <a href="#" class="menu__link">Расходы</a>
+        <a href="#" class="menu__link menu__link--selected">Доходы</a>
+        <span class="menu__link menu__dropdown">
+            Отчёты
+            <svg class="menu__link--icon" fill="currentcolor" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M0.5 2.37868L1.91421 0.964462L7.57107 6.62132L6.15685 8.03553L0.5 2.37868Z" /><path d="M10.3995 0.964462L11.8137 2.37868L6.15685 8.03553L4.74264 6.62132L10.3995 0.964462Z" /></svg>
+            
+            <section class="menu__reports">
+                <a href="#" class="menu__link menu__link--selected">
+                    Отчёты расходов
+                    <svg class="menu__link--icon" fill="currentcolor" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M0.5 2.37868L1.91421 0.964462L7.57107 6.62132L6.15685 8.03553L0.5 2.37868Z" /><path d="M10.3995 0.964462L11.8137 2.37868L6.15685 8.03553L4.74264 6.62132L10.3995 0.964462Z" /></svg>
+                </a>
+
+                <a href="#" class="menu__link menu__link--selected">
+                    Отчёты расходов
+                    <svg class="menu__link--icon" fill="currentcolor" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M0.5 2.37868L1.91421 0.964462L7.57107 6.62132L6.15685 8.03553L0.5 2.37868Z" /><path d="M10.3995 0.964462L11.8137 2.37868L6.15685 8.03553L4.74264 6.62132L10.3995 0.964462Z" /></svg>
+                </a>
+            </section>
+        </span>
     </nav>
-    <article class="account">
-        <artic le class="account-btns">
-            <button class="account-btns__login">Войти</button>
-            <button class="account-btns__register">Регистрация</button>
-        </artic>
-        <article class="profile">
-            <section class="profile__main">
-                <img src="../img/avatar.png" alt="profile-avatar" class="profile__avatar">
-                <svg class="profile__dropdown" xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9">
-                    <path d="M0.5 2.37868L1.91421 0.964462L7.57107 6.62132L6.15685 8.03553L0.5 2.37868Z" />
-                    <path d="M10.3995 0.964462L11.8137 2.37868L6.15685 8.03553L4.74264 6.62132L10.3995 0.964462Z" />
-                </svg>
-            </section>
-            <section class="profile__additional">
-                <span class="profile__item">
-                    <img src="../img/avatar.png" alt="profile-avatar" class="profile__avatar">
-                    Илья прусикин
-                </span>
-                <hr>
-                <a href="#" class="profile__link">
-                    Редактировать профиль
-                    <svg class="profile__dropdown" xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9">
-                        <path d="M0.5 2.37868L1.91421 0.964462L7.57107 6.62132L6.15685 8.03553L0.5 2.37868Z" />
-                        <path d="M10.3995 0.964462L11.8137 2.37868L6.15685 8.03553L4.74264 6.62132L10.3995 0.964462Z" />
-                    </svg>
-                </a>
-                <hr>
-                <a href="#" class="profile__link">
-                    Выйти
-                </a>
-            </section>
-        </article>
-        <script>
-            const profileOpenBtn = document.querySelector(".profile__main");
-            profileOpenBtn.addEventListener("click", () => profileOpenBtn.parentElement.classList.toggle("profile_open"));
-        </script>
+    <section class="nav-btns">
+        <button class="nav-btns__button nav-btns__login">Войти</button>
+        <button class="nav-btns__button nav-btns__register">Регистрация</button>
+    </section>
+    <article class="nav-profile">
+        <section class="nav-profile__main">
+            <img class="nav-profile__avatar" src="../img/avatar.png" alt="profile-avatar">
+            <svg class="nav-profile--icon" fill="currentcolor" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M0.5 2.37868L1.91421 0.964462L7.57107 6.62132L6.15685 8.03553L0.5 2.37868Z" /><path d="M10.3995 0.964462L11.8137 2.37868L6.15685 8.03553L4.74264 6.62132L10.3995 0.964462Z" /></svg>
+        </section>
+
+        <section class="nav-profile__additional">
+            <div class="nav-profile__name">
+                <img class="nav-profile__avatar" src="../img/avatar.png" alt="profile-avatar">
+                Илья Прусикин
+            </div>
+            <a href="#" class="menu__link menu__link--selected">
+                Редактировать профиль
+                <svg class="menu__link--icon" fill="currentcolor" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M0.5 2.37868L1.91421 0.964462L7.57107 6.62132L6.15685 8.03553L0.5 2.37868Z" /><path d="M10.3995 0.964462L11.8137 2.37868L6.15685 8.03553L4.74264 6.62132L10.3995 0.964462Z" /></svg>
+            </a>
+            <a href="#" class="menu__link menu__link--selected">
+                Выйти
+            </a>
+        </section>
     </article>
+
+    <script src="../js/header.js"></script>
 </header>

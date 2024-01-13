@@ -1,0 +1,60 @@
+.nav-profile {
+    position: relative;
+
+  &__main {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+
+  &_open {
+    .nav-profile--icon {
+      rotate: 180deg;
+    }
+    .nav-profile__additional {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__additional {
+    position: absolute;
+    width: max-content;
+    right: 0;
+    top: 50px;
+    box-shadow: 0px 0px 5px 0px $colorDark;
+    padding: 15px 30px;
+    visibility: hidden;
+    opacity: 0;
+    transition: $trans;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    cursor: auto;
+  }
+
+  .menu__link {
+    &:last-child {
+      color: $colorRed;
+    }
+
+    &:hover .menu__link--icon {
+      translate: 75%;
+    }
+  }
+
+  .menu__link .menu__link--icon {
+    rotate: -90deg;
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+.nav-profile--icon {
+  transition: $trans;
+}
