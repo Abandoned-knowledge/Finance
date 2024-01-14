@@ -55,6 +55,8 @@
     transition: $trans;
     visibility: hidden;
     opacity: 0;
+    z-index: 1;
+
 
     .menu__link:hover {
       .menu__link--icon {

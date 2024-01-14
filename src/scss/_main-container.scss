@@ -1,6 +1,9 @@
 .main-container{
     font-family: 'Jost', sans-serif;
     max-width: 1400px;
-    width: 96%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin: 0 auto;
 }

@@ -2,7 +2,10 @@
 .main-container {
   font-family: "Jost", sans-serif;
   max-width: 1400px;
-  width: 96%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin: 0 auto;
 }
 
@@ -75,6 +78,7 @@
   transition: all 0.3s ease;
   visibility: hidden;
   opacity: 0;
+  z-index: 1;
 }
 .menu__reports .menu__link:hover .menu__link--icon {
   translate: 75%;
