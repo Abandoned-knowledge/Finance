@@ -50,6 +50,10 @@ gulp.task("php", function () {
     .pipe(gulp.dest("./public/"));
 });
 
+gulp.task("vendor", function () {
+  return gulp.src("./src/vendor/").pipe(gulp.dest("./public/"));
+});
+
 gulp.task("server", function () {
   browserSync.init({
     // server: {
@@ -81,7 +85,7 @@ gulp.task(
   "default",
   gulp.series(
     "clean",
-    gulp.parallel("html", "sass", "img", "js", "php"),
+    gulp.parallel("html", "sass", "img", "js", "php", "vendor"),
     gulp.parallel("watch", "server")
   )
 );
