@@ -29,19 +29,23 @@
             </section>
         </span>
     </nav>
-    <section class="nav-btns">
+    <form action="../pages/reg-log.html" class="nav-btns">
         <button class="nav-btns__button nav-btns__login">Войти</button>
         <button class="nav-btns__button nav-btns__register">Регистрация</button>
-    </section>
+    </form>
     <article class="nav-profile">
         <section class="nav-profile__main">
-            <img class="nav-profile__avatar" src="../img/avatar.png" alt="profile-avatar">
+            <div class="nav-profile__avatar">
+                <img class="nav-profile__image" src="../img/avatar.jpg" alt="profile-avatar">
+            </div>
             <svg class="nav-profile--icon" fill="currentcolor" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M0.5 2.37868L1.91421 0.964462L7.57107 6.62132L6.15685 8.03553L0.5 2.37868Z" /><path d="M10.3995 0.964462L11.8137 2.37868L6.15685 8.03553L4.74264 6.62132L10.3995 0.964462Z" /></svg>
         </section>
 
         <section class="nav-profile__additional">
             <div class="nav-profile__name">
-                <img class="nav-profile__avatar" src="../img/avatar.png" alt="profile-avatar">
+                <div class="nav-profile__avatar">
+                    <img class="nav-profile__image" src="../img/avatar.jpg" alt="profile-avatar">
+                </div>
                 Илья Прусикин
             </div>
             <a href="../pages/profile.html" class="menu__link menu__link--selected">
@@ -58,8 +62,47 @@
 </header>
 
       <main class="main">
-        <h1>profile</h1>
+        <article class="profile-settings">
+    <form action="#" class="profile-settings__change-image shadowBorder">
+        <h1 class="h1-title">Изменение Фотографии</h1>
+        <div class="profile-settings__avatar"><img src="../img/avatar.jpg" class="profile-settings__image" alt="profile-avatar"></div>
+        <input id="profile-settings__file" type="file" accept=".jpg, .jpeg, .png" class="profile-settings__file" src="" alt="">
+        <label for="profile-settings__file" class="profile-settings__button">Выбрать фото</label>
+        <button type="submit" class="profile-settings__button">Изменить фотографию</button>
+    </form>
+
+    <form action="#" class="profile-settings__change-name shadowBorder">
+        <h1 class="h1-title">Редактирование Профиля</h1>
+        <section class="input">
+            <span class="input__title">Имя</span>
+            <input type="text" class="input__content" name="form-name" placeholder="Имя">
+        </section>
+        <section class="input">
+            <span class="input__title">Фамилия</span>
+            <input type="text" class="input__content" name="form-second-name" placeholder="Фамилия">
+        </section>
+        <button type="submit" class="profile-settings__button">Сохранить изменения</button>
+    </form>
+
+    <form action="#" class="profile-settings__change-password shadowBorder">
+        <h1 class="h1-title">Изменение пароля</h1>
+        <section class="input">
+            <span class="input__title">Старый пароль</span>
+            <input type="password" class="input__content" name="form-old-password" placeholder="Старый пароль">
+        </section>
+        <section class="input">
+            <span class="input__title">Новый пароль</span>
+            <input type="password" class="input__content" name="form-new-password" placeholder="Новый пароль">
+        </section>
+        <section class="input">
+            <span class="input__title">Повторите новый пароль</span>
+            <input type="password" class="input__content" name="form-new-repeat-password" placeholder="Новый пароль">
+        </section>
+        <button type="submit" class="profile-settings__button">Изменить пароль</button>
+    </form>
+</article>
       </main>
     </section>
   </body>
 </html>
+`

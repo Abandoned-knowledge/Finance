@@ -18,6 +18,18 @@
     }
   }
 
+  &__avatar{
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+  &__image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   &__additional {
     position: absolute;
     width: max-content;
@@ -28,6 +40,8 @@
     visibility: hidden;
     opacity: 0;
     transition: $trans;
+    background-color: $colorLight;
+    z-index: 1;
 
     display: flex;
     flex-direction: column;

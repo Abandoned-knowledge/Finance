@@ -1,0 +1,39 @@
+.form-finance {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 50px 0px;
+
+  &__rows {
+    display: flex;
+    gap: 20px;
+
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+    }
+  }
+}
+.shadowBorder {
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5);
+  padding: 50px;
+}
+
+.reg-auth-forms {
+  margin: 50px 0;
+  display: flex;
+  gap: 50px;
+
+  @media screen and (max-width:800px) {
+    flex-direction: column;
+  }
+}
+.register-form,
+.auth-form {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}

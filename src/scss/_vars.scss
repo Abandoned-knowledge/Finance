@@ -1,5 +1,29 @@
 $colorDark: #232323;
 $colorLight: #fff;
-$colorGrey: #979797;
-$colorRed: #E4294B;
-$trans: all .3s ease;
+$colorGrey: #747474;
+$colorRed: #e4294b;
+$colorExp: #c363ae;
+$colorInc: #49ae60;
+$trans: all 0.3s ease;
+
+$fzMain: 16px;
+$fzMainBig: 20px;
+$fzTitle: 32px;
+
+.h1-title {
+  font-size: $fzTitle;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
+  @media screen and (max-width: 700px) {
+    font-size: 1.5em;
+  }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

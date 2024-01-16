@@ -22,7 +22,6 @@ window.addEventListener("click", function (event) {
 
 document.addEventListener("DOMContentLoaded", function () {
   let path = window.location.pathname;
-  console.log(path);
 
   for (let i = 0; i < navLinks.length; i++) {
     try {
@@ -31,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
         break;
       }
     } catch (error) {
-      console.log(navLinks[i].classList.add("menu__link--selected"));
+      navLinks[i].classList.add("menu__link--selected");
     }
   }
 });

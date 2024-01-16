@@ -1,0 +1,28 @@
+.button-finance {
+    padding: 15px 0px;
+    color: $colorLight;
+    border: none;
+    font-size: $fzMainBig;
+    font-family: inherit;
+    text-transform: uppercase;
+    font-weight: 700;
+    width: 100%;
+    cursor: pointer;
+}
+.button-expenses {
+    background-color: $colorExp;
+    box-shadow: 0px 3px darken($colorExp, 30%);
+    transition: $trans;
+
+    &:hover{
+        background-color: darken($colorExp,  5%);
+    }
+}
+.button-income {
+    background-color: $colorInc;
+    box-shadow: 0px 3px darken($colorInc, 30%);
+
+    &:hover{
+        background-color: darken($colorInc,  5%);
+    }
+}

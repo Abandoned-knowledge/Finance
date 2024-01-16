@@ -29,19 +29,23 @@
             </section>
         </span>
     </nav>
-    <section class="nav-btns">
+    <form action="../pages/reg-log.html" class="nav-btns">
         <button class="nav-btns__button nav-btns__login">Войти</button>
         <button class="nav-btns__button nav-btns__register">Регистрация</button>
-    </section>
+    </form>
     <article class="nav-profile">
         <section class="nav-profile__main">
-            <img class="nav-profile__avatar" src="../img/avatar.png" alt="profile-avatar">
+            <div class="nav-profile__avatar">
+                <img class="nav-profile__image" src="../img/avatar.jpg" alt="profile-avatar">
+            </div>
             <svg class="nav-profile--icon" fill="currentcolor" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M0.5 2.37868L1.91421 0.964462L7.57107 6.62132L6.15685 8.03553L0.5 2.37868Z" /><path d="M10.3995 0.964462L11.8137 2.37868L6.15685 8.03553L4.74264 6.62132L10.3995 0.964462Z" /></svg>
         </section>
 
         <section class="nav-profile__additional">
             <div class="nav-profile__name">
-                <img class="nav-profile__avatar" src="../img/avatar.png" alt="profile-avatar">
+                <div class="nav-profile__avatar">
+                    <img class="nav-profile__image" src="../img/avatar.jpg" alt="profile-avatar">
+                </div>
                 Илья Прусикин
             </div>
             <a href="../pages/profile.html" class="menu__link menu__link--selected">
@@ -58,7 +62,56 @@
 </header>
 
       <main class="main">
-        <h1>income</h1>
+        <form action="#" class="form-finance shadowBorder">
+    <h1 class="h1-title">Добавление статьи доходов</h1>
+    <section class="form-finance__rows">
+        <section class="input">
+            <span class="input__title">Дата</span>
+            <input type="date" class="input__content" name="form-date" placeholder="Дата">
+        </section>
+
+        <section class="dropdown">
+            <span class="dropdown__title">Категория</span>
+            <input type="text" class="dropdown__input" value="" disabled hidden>
+            <section class="dropdown__button">
+                <span class="dropdown__text">Выберите категорию</span>
+                <svg class="dropdown__icon" fill="currentcolor" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M0.5 2.37868L1.91421 0.964462L7.57107 6.62132L6.15685 8.03553L0.5 2.37868Z" /><path d="M10.3995 0.964462L11.8137 2.37868L6.15685 8.03553L4.74264 6.62132L10.3995 0.964462Z" /></svg>
+                
+                <div class="dropdown__content">
+                    <span class="dropdown__item" data-value="Маркетплейс">Стипендия</span>
+                    <span class="dropdown__item" data-value="Продукты">Основная работа</span>
+                    <span class="dropdown__item" data-value="Проезд">Подработка</span>
+                </div>
+            </section>
+        </section>
+
+        <section class="input">
+            <span class="input__title">Описание</span>
+            <input type="text" class="input__content" name="form-description" placeholder="Описание">
+        </section>
+
+        <section class="input">
+            <span class="input__title">Сумма</span>
+            <input type="text" class="input__content" name="form-sum" placeholder="Сумма">
+        </section>
+    </section>
+
+
+    <button class="button-finance button-income">Добавить</button>
+</form>
+<script src="../js/dropdown.js"></script>
+        <div class="charts">
+  <div class="charts__item shadowBorder">
+    <canvas id="first-chart-income"></canvas>
+  </div>
+  <div class="charts__item shadowBorder">
+    <canvas id="second-chart-income"></canvas>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../js/charts-income.js"></script>
+
       </main>
     </section>
   </body>
