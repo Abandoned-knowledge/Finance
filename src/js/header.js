@@ -1,6 +1,6 @@
 const menuOpenDropdown = document.querySelector(".menu__dropdown");
 const navProfile = document.querySelector(".nav-profile__main");
-const navLinks = document.querySelectorAll(".menu .menu__link");
+const navLinks = document.querySelectorAll(".menu .nav__link");
 
 menuOpenDropdown.addEventListener("mouseover", function () {
   this.classList.add("menu__dropdown_open");
@@ -20,17 +20,19 @@ window.addEventListener("click", function (event) {
   event.stopPropagation();
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  let path = window.location.pathname;
+// document.addEventListener("DOMContentLoaded", function (event) {
+//   let path = window.location.pathname;
 
-  for (let i = 0; i < navLinks.length; i++) {
-    try {
-      if (navLinks[i].getAttribute("href").includes(path)) {
-        navLinks[i].classList.add("menu__link--selected");
-        break;
-      }
-    } catch (error) {
-      navLinks[i].classList.add("menu__link--selected");
-    }
-  }
-});
+//   console.log(path);
+
+//   for (const item of navLinks) {
+//     if (item.getAttribute("href").includes(path)) {
+//       item.classList.add("menu__link--selected");
+//       break;
+//     }
+//     if (item.getAttribute("href").includes("/pages/report-income.html") || item.getAttribute("href").includes("/pages/report-expenses.html")) {
+//       console.log(1);
+//       item.parentElement.parentElement.classList.add("menu__link--selected");
+//     }
+//   }
+// });

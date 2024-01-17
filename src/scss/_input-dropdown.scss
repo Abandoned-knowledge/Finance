@@ -8,12 +8,15 @@
     font-size: $fzMain;
   }
 
-  &__button {
+  &__container {
     position: relative;
+    cursor: pointer;
+  }
+
+  &__button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    cursor: pointer;
   }
 
   &__icon {
