@@ -26,6 +26,7 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   margin: 0 auto;
 }
 
@@ -481,4 +482,12 @@
 .table-income__table td {
   padding: 10px;
   text-align: center;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #747474;
+  padding: 30px 0px;
 }
