@@ -279,6 +279,65 @@
   visibility: visible;
 }
 
+.category-dropdown {
+  overflow: hidden;
+}
+.category-dropdown__button {
+  display: flex;
+  border: 1px solid #232323;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.category-dropdown__icon {
+  transition: all 0.3s ease;
+}
+.category-dropdown__text--hidden {
+  display: none;
+}
+.category-dropdown__list {
+  list-style-type: none;
+  border: 1px solid #232323;
+  overflow: hidden;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+}
+.category-dropdown__item {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  transition: all 0.15s ease;
+  background-color: #fff;
+  cursor: pointer;
+}
+.category-dropdown__item:hover {
+  background-color: #dadada;
+}
+
+.category-dropdown_open .category-dropdown__button {
+  border: 1px solid #232323;
+  border-bottom: none;
+  border-radius: 5px 5px 0px 0px;
+}
+.category-dropdown_open .category-dropdown__icon {
+  rotate: 180deg;
+}
+.category-dropdown_open .category-dropdown__list {
+  border-radius: 0px 0px 5px 5px;
+  overflow: hidden;
+  transform: translateY(0%);
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
 .button-finance {
   padding: 15px 0px;
   color: #fff;
