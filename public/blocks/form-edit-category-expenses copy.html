@@ -1,0 +1,62 @@
+<form action="#" class="form-finance shadowBorder">
+    <h1 class="h1-title">Изменение категории расходов</h1>
+    <section class="category-dropdown">
+        <div class="category-dropdown__button">
+            <span class="category-dropdown__text--show">Показать список категорий</span>
+            <span class="category-dropdown__text--close category-dropdown__text--hidden ">Скрыть список категорий</span>
+            <svg class="category-dropdown__icon" fill="currentcolor" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M0.5 2.37868L1.91421 0.964462L7.57107 6.62132L6.15685 8.03553L0.5 2.37868Z" /><path d="M10.3995 0.964462L11.8137 2.37868L6.15685 8.03553L4.74264 6.62132L10.3995 0.964462Z" /></svg>
+        </div>
+
+        <ul class="category-dropdown__list">
+
+            <li class="category-dropdown__item">
+                Маркетплейс
+                <div class="table-expenses__actions">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="currentcolor"><path d="M3 21.75V17.5L16.2 4.325C16.4 4.14167 16.621 4 16.863 3.9C17.105 3.8 17.359 3.75 17.625 3.75C17.8917 3.75 18.15 3.8 18.4 3.9C18.65 4 18.8667 4.15 19.05 4.35L20.425 5.75C20.625 5.93333 20.771 6.15 20.863 6.4C20.955 6.65 21.0007 6.9 21 7.15C21 7.41667 20.9543 7.671 20.863 7.913C20.7717 8.155 20.6257 8.37567 20.425 8.575L7.25 21.75H3ZM17.6 8.55L19 7.15L17.6 5.75L16.2 7.15L17.6 8.55Z"/></svg>
+                    </a>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="currentcolor"><path d="M7 21.75C6.45 21.75 5.97933 21.5543 5.588 21.163C5.19667 20.7717 5.00067 20.3007 5 19.75V6.75H4V4.75H9V3.75H15V4.75H20V6.75H19V19.75C19 20.3 18.8043 20.771 18.413 21.163C18.0217 21.555 17.5507 21.7507 17 21.75H7ZM9 17.75H11V8.75H9V17.75ZM13 17.75H15V8.75H13V17.75Z"/></svg>
+                    </a>
+                </div>
+            </li>
+
+            <li class="category-dropdown__item">
+                Продукты
+                <div class="table-expenses__actions">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="currentcolor"><path d="M3 21.75V17.5L16.2 4.325C16.4 4.14167 16.621 4 16.863 3.9C17.105 3.8 17.359 3.75 17.625 3.75C17.8917 3.75 18.15 3.8 18.4 3.9C18.65 4 18.8667 4.15 19.05 4.35L20.425 5.75C20.625 5.93333 20.771 6.15 20.863 6.4C20.955 6.65 21.0007 6.9 21 7.15C21 7.41667 20.9543 7.671 20.863 7.913C20.7717 8.155 20.6257 8.37567 20.425 8.575L7.25 21.75H3ZM17.6 8.55L19 7.15L17.6 5.75L16.2 7.15L17.6 8.55Z"/></svg>
+                    </a>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="currentcolor"><path d="M7 21.75C6.45 21.75 5.97933 21.5543 5.588 21.163C5.19667 20.7717 5.00067 20.3007 5 19.75V6.75H4V4.75H9V3.75H15V4.75H20V6.75H19V19.75C19 20.3 18.8043 20.771 18.413 21.163C18.0217 21.555 17.5507 21.7507 17 21.75H7ZM9 17.75H11V8.75H9V17.75ZM13 17.75H15V8.75H13V17.75Z"/></svg>
+                    </a>
+                </div>
+            </li>
+
+        </ul>
+    </section>
+
+    <button class="button-finance button-expenses">Добавить</button>
+</form>
+
+<script>
+    const dropdownCategory = document.querySelector(".category-dropdown");
+    const dropdownCategoryBtn = dropdownCategory.querySelector(".category-dropdown__button");
+    const dropdownList = dropdownCategory.querySelector(".category-dropdown__list");
+    const dropdownTextShow = dropdownCategory.querySelector(".category-dropdown__text--show");
+    const dropdownTextClose = dropdownCategory.querySelector(".category-dropdown__text--close");
+
+    dropdownCategoryBtn.addEventListener("click", function () {
+        dropdownCategory.classList.toggle("category-dropdown_open");
+
+        if (dropdownCategory.classList.contains("category-dropdown_open")) {
+            dropdownTextShow.classList.add("category-dropdown__text--hidden");
+            dropdownTextClose.classList.remove("category-dropdown__text--hidden");
+        } else {
+            dropdownTextShow.classList.remove("category-dropdown__text--hidden");
+            dropdownTextClose.classList.add("category-dropdown__text--hidden");
+        }
+    })
+
+
+</script>
