@@ -8,12 +8,10 @@
   </head>
   <body>
     <section class="main-container">
-      @@include("../blocks/header.html")
+      @@include("../blocks/header.php")
 
       <main class="main">
-        @@include("../blocks/form-expenses.html")
-        @@include("../blocks/chart-expenses.html")
-        @@include("../blocks/form-edit-category-expenses.html")
+        @@include("../blocks/table-income.html")
       </main>
 
       @@include("../blocks/footer.html")

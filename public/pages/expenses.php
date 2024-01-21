@@ -10,60 +10,73 @@
     <section class="main-container">
       <header class="header">
     <nav class="menu">
-        <a href="../pages/expenses.html" class="menu__link nav__link">Расходы</a>
-        <a href="../pages/income.html" class="menu__link nav__link">Доходы</a>
+        <a href="../pages/expenses.php" class="menu__link nav__link">Расходы</a>
+        <a href="../pages/income.php" class="menu__link nav__link">Доходы</a>
         <span class="menu__link menu__dropdown">
             Отчёты
             <svg class="menu__link--icon" fill="currentcolor" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M0.5 2.37868L1.91421 0.964462L7.57107 6.62132L6.15685 8.03553L0.5 2.37868Z" /><path d="M10.3995 0.964462L11.8137 2.37868L6.15685 8.03553L4.74264 6.62132L10.3995 0.964462Z" /></svg>
             
             <section class="menu__reports">
-                <a href="../pages/report-expenses.html" class="menu__link menu__link--selected nav__link">
+                <a href="../pages/report-expenses.php" class="menu__link menu__link--selected nav__link">
                     Отчёты расходов
                     <svg class="menu__link--icon" fill="currentcolor" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M0.5 2.37868L1.91421 0.964462L7.57107 6.62132L6.15685 8.03553L0.5 2.37868Z" /><path d="M10.3995 0.964462L11.8137 2.37868L6.15685 8.03553L4.74264 6.62132L10.3995 0.964462Z" /></svg>
                 </a>
 
-                <a href="../pages/report-income.html" class="menu__link menu__link--selected nav__link">
+                <a href="../pages/report-income.php" class="menu__link menu__link--selected nav__link">
                     Отчёты доходов
                     <svg class="menu__link--icon" fill="currentcolor" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M0.5 2.37868L1.91421 0.964462L7.57107 6.62132L6.15685 8.03553L0.5 2.37868Z" /><path d="M10.3995 0.964462L11.8137 2.37868L6.15685 8.03553L4.74264 6.62132L10.3995 0.964462Z" /></svg>
                 </a>
             </section>
         </span>
     </nav>
-    <form action="../pages/reg-log.html" class="nav-btns">
-        <button class="nav-btns__button nav-btns__login">Войти</button>
-        <button class="nav-btns__button nav-btns__register">Регистрация</button>
-    </form>
-    <article class="nav-profile">
-        <section class="nav-profile__main">
-            <div class="nav-profile__avatar">
-                <img class="nav-profile__image" src="../img/avatar.jpg" alt="profile-avatar">
-            </div>
-            <svg class="nav-profile--icon" fill="currentcolor" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M0.5 2.37868L1.91421 0.964462L7.57107 6.62132L6.15685 8.03553L0.5 2.37868Z" /><path d="M10.3995 0.964462L11.8137 2.37868L6.15685 8.03553L4.74264 6.62132L10.3995 0.964462Z" /></svg>
-        </section>
 
-        <section class="nav-profile__additional">
-            <div class="nav-profile__name">
+
+    <?php
+        if (isset($_COOKIE['user'])) {
+            echo 
+            ('
+            <article class="nav-profile">
+            <section class="nav-profile__main">
                 <div class="nav-profile__avatar">
-                    <img class="nav-profile__image" src="../img/avatar.jpg" alt="profile-avatar">
+                    <img class="nav-profile__image" src="../img/avatar-empty.png" alt="profile-avatar">
                 </div>
-                Илья Прусикин
-            </div>
-            <a href="../pages/profile.html" class="menu__link menu__link--selected">
-                Редактировать профиль
-                <svg class="menu__link--icon" fill="currentcolor" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M0.5 2.37868L1.91421 0.964462L7.57107 6.62132L6.15685 8.03553L0.5 2.37868Z" /><path d="M10.3995 0.964462L11.8137 2.37868L6.15685 8.03553L4.74264 6.62132L10.3995 0.964462Z" /></svg>
-            </a>
-            <a href="../pages/exit.html" class="menu__link menu__link--selected">
-                Выйти
-            </a>
-        </section>
-    </article>
+                <svg class="nav-profile--icon" fill="currentcolor" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M0.5 2.37868L1.91421 0.964462L7.57107 6.62132L6.15685 8.03553L0.5 2.37868Z" /><path d="M10.3995 0.964462L11.8137 2.37868L6.15685 8.03553L4.74264 6.62132L10.3995 0.964462Z" /></svg>
+            </section>
 
+            <section class="nav-profile__additional">
+                <div class="nav-profile__name">
+                    <div class="nav-profile__avatar">
+                        <img class="nav-profile__image" src="../img/avatar-empty.png" alt="profile-avatar">
+                    </div>
+                    Илья Прусикин
+                </div>
+                <a href="../pages/profile.php" class="menu__link menu__link--selected">
+                    Редактировать профиль
+                    <svg class="menu__link--icon" fill="currentcolor" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M0.5 2.37868L1.91421 0.964462L7.57107 6.62132L6.15685 8.03553L0.5 2.37868Z" /><path d="M10.3995 0.964462L11.8137 2.37868L6.15685 8.03553L4.74264 6.62132L10.3995 0.964462Z" /></svg>
+                </a>
+                <a href="../vendor/logout.php" class="menu__link menu__link--selected">
+                    Выйти
+                </a>
+            </section>
+            </article>
+            ');
+            
+        } else {
+            echo
+            ('
+            <form action="../pages/reg-log.php" class="nav-btns">
+                <button class="nav-btns__button nav-btns__login">Войти</button>
+                <button class="nav-btns__button nav-btns__register">Регистрация</button>
+            </form>
+            ');
+        }
+    ?>
     <script src="../js/header.js"></script>
 </header>
 
       <main class="main">
         <form action="#" class="form-finance shadowBorder">
-    <h1 class="h1-title">Добавление статьи доходов</h1>
+    <h1 class="h1-title">Добавление статьи расходов</h1>
     <section class="form-finance__rows">
         <section class="input">
             <span class="input__title">Дата</span>
@@ -80,12 +93,13 @@
                 </div>
                 
                 <div class="dropdown__content">
-                    <span class="dropdown__item" data-value="Маркетплейс">Стипендия</span>
-                    <span class="dropdown__item" data-value="Продукты">Основная работа</span>
-                    <span class="dropdown__item" data-value="Проезд">Подработка</span>
+                    <span class="dropdown__item" data-value="Маркетплейс">Маркетплейс</span>
+                    <span class="dropdown__item" data-value="Продукты">Продукты</span>
+                    <span class="dropdown__item" data-value="Проезд">Проезд</span>
                 </div>
             </section>
         </section>
+
 
         <section class="input">
             <span class="input__title">Описание</span>
@@ -99,20 +113,20 @@
     </section>
 
 
-    <button class="button-finance button-income">Добавить</button>
+    <button class="button-finance button-expenses">Добавить</button>
 </form>
 <script src="../js/dropdown.js"></script>
         <div class="charts">
   <div class="charts__item shadowBorder">
-    <canvas id="first-chart-income"></canvas>
+    <canvas id="first-chart-expenses"></canvas>
   </div>
   <div class="charts__item shadowBorder">
-    <canvas id="second-chart-income"></canvas>
+    <canvas id="second-chart-expenses"></canvas>
   </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="../js/charts-income.js"></script>
+<script src="../js/charts-expenses.js"></script>
 
         <form action="#" class="form-finance shadowBorder">
     <h1 class="h1-title">Изменение категории расходов</h1>
@@ -126,7 +140,7 @@
         <ul class="category-dropdown__list">
 
             <li class="category-dropdown__item">
-                Стипендия
+                Маркетплейс
                 <div class="table-expenses__actions">
                     <a href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="currentcolor"><path d="M3 21.75V17.5L16.2 4.325C16.4 4.14167 16.621 4 16.863 3.9C17.105 3.8 17.359 3.75 17.625 3.75C17.8917 3.75 18.15 3.8 18.4 3.9C18.65 4 18.8667 4.15 19.05 4.35L20.425 5.75C20.625 5.93333 20.771 6.15 20.863 6.4C20.955 6.65 21.0007 6.9 21 7.15C21 7.41667 20.9543 7.671 20.863 7.913C20.7717 8.155 20.6257 8.37567 20.425 8.575L7.25 21.75H3ZM17.6 8.55L19 7.15L17.6 5.75L16.2 7.15L17.6 8.55Z"/></svg>
@@ -138,7 +152,7 @@
             </li>
 
             <li class="category-dropdown__item">
-                Подработка
+                Продукты
                 <div class="table-expenses__actions">
                     <a href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="currentcolor"><path d="M3 21.75V17.5L16.2 4.325C16.4 4.14167 16.621 4 16.863 3.9C17.105 3.8 17.359 3.75 17.625 3.75C17.8917 3.75 18.15 3.8 18.4 3.9C18.65 4 18.8667 4.15 19.05 4.35L20.425 5.75C20.625 5.93333 20.771 6.15 20.863 6.4C20.955 6.65 21.0007 6.9 21 7.15C21 7.41667 20.9543 7.671 20.863 7.913C20.7717 8.155 20.6257 8.37567 20.425 8.575L7.25 21.75H3ZM17.6 8.55L19 7.15L17.6 5.75L16.2 7.15L17.6 8.55Z"/></svg>
@@ -152,7 +166,7 @@
         </ul>
     </section>
 
-    <button class="button-finance button-income">Добавить</button>
+    <button class="button-finance button-expenses">Добавить</button>
 </form>
 
 <script>

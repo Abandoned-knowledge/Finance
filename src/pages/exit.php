@@ -8,14 +8,13 @@
   </head>
   <body>
     <section class="main-container">
-      @@include("../blocks/header.html")
+      @@include("../blocks/header.php")
 
       <main class="main">
-        @@include("../blocks/reg-log.html")
+        <h1>exit</h1>
       </main>
 
       @@include("../blocks/footer.html")
     </section>
   </body>
 </html>
-`

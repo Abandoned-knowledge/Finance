@@ -8,7 +8,7 @@
   </head>
   <body>
     <section class="main-container">
-        @@include("./blocks/header.html")
+        @@include("./blocks/header.php")
         <main class="main">Hello, i'm main</main>
         @@include("./blocks/footer.html")
     </section>

@@ -1,39 +1,45 @@
+
+
 <article class="reg-auth-forms">
-    <form action="#" class="register-form shadowBorder">
+    <form action="../vendor/registration.php" method="post" class="register-form shadowBorder">
         <h1 class="h1-title">Создание аккаунта</h1>
         <section class="input">
             <span class="input__title">Имя</span>
-            <input type="text" class="input__content" name="form-name" placeholder="Имя">
+            <input type="text" class="input__content" name="form-name" placeholder="Имя" required>
         </section>
+
         <section class="input">
             <span class="input__title">Фамилия</span>
-            <input type="text" class="input__content" name="form-second-name" placeholder="Фамилия">
+            <input type="text" class="input__content" name="form-second-name" placeholder="Фамилия" required>
         </section>
+
         <section class="input">
             <span class="input__title">Логин</span>
-            <input type="text" class="input__content" name="form-login" placeholder="Логин">
+            <input type="text" class="input__content" name="form-login" placeholder="Логин" required>
         </section>
+
         <section class="input">
             <span class="input__title">Пароль</span>
-            <input type="text" class="input__content" name="form-password" placeholder="Пароль">
+            <input type="password" class="input__content" name="form-password" placeholder="Пароль" required>
         </section>
+
         <section class="input">
             <span class="input__title">Повторите пароль</span>
-            <input type="text" class="input__content" name="form-repeat-password" placeholder="Пароль">
+            <input type="password" class="input__content" name="form-repeat-password" placeholder="Пароль" required>
         </section>
     
         <button type="submit" class="profile-settings__button">Создать</button>
     </form>
     
-    <form action="#" class="auth-form shadowBorder">
+    <form action="../vendor/auto.php" method="post" class="auth-form shadowBorder">
         <h1 class="h1-title">Авторизация в аккаунт</h1>
         <section class="input">
             <span class="input__title">Логин</span>
-            <input type="text" class="input__content" name="form-login" placeholder="Логин">
+            <input type="text" class="input__content" name="form-login" placeholder="Логин" required>
         </section>
         <section class="input">
             <span class="input__title">Пароль</span>
-            <input type="text" class="input__content" name="form-password" placeholder="Пароль">
+            <input type="password" class="input__content" name="form-password" placeholder="Пароль" required>
         </section>
     
         <button type="submit" class="profile-settings__button">Войти</button>

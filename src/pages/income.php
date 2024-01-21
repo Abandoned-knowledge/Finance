@@ -8,14 +8,15 @@
   </head>
   <body>
     <section class="main-container">
-      @@include("../blocks/header.html")
+      @@include("../blocks/header.php")
 
       <main class="main">
-        @@include("../blocks/profile.html")
+        @@include("../blocks/form-income.html")
+        @@include("../blocks/chart-income.html")
+        @@include("../blocks/form-edit-category-income.html")
       </main>
 
       @@include("../blocks/footer.html")
     </section>
   </body>
 </html>
-`
