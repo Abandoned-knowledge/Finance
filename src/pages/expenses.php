@@ -11,7 +11,7 @@
       @@include("../blocks/header.php")
 
       <main class="main">
-        @@include("../blocks/form-expenses.html")
+        @@include("../blocks/form-expenses.php")
         @@include("../blocks/chart-expenses.html")
         @@include("../blocks/form-edit-category-expenses.html")
       </main>
