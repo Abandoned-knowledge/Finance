@@ -10,6 +10,7 @@
     <section class="main-container">
         @@include("./blocks/header.php")
         <main class="main">Hello, i'm main</main>
+        @@include("./blocks/modal.html")
         @@include("./blocks/footer.html")
     </section>
   </body>

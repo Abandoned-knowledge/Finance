@@ -84,12 +84,13 @@ $curUser = unserialize($_COOKIE['user']);
     <section class="form-finance__rows">
         <section class="input">
             <span class="input__title">Дата</span>
-            <input type="date" class="input__content" name="form-date" placeholder="Дата">
+            <input type="date" class="input__content input__content--date" name="form-date" placeholder="Дата">
         </section>
+        <script src="../js/input-date.js"></script>
 
         <section class="dropdown">
             <span class="dropdown__title">Категория</span>
-            <input type="text" class="dropdown__input" value="" disabled hidden>
+            <input type="text" class="dropdown__input" value="" hidden>
             <section class="dropdown__container">
                 <div class="dropdown__button">
                     <span class="dropdown__text">Выберите категорию</span>
@@ -97,13 +98,12 @@ $curUser = unserialize($_COOKIE['user']);
                 </div>
                 
                 <div class="dropdown__content">
-                    <span class="dropdown__item" data-value="Маркетплейс">Маркетплейс</span>
-                    <span class="dropdown__item" data-value="Продукты">Продукты</span>
-                    <span class="dropdown__item" data-value="Проезд">Проезд</span>
+                    <span class="dropdown__item"> <span class="dropdown__item--id">1</span> Маркетплейс</span>
+                    <span class="dropdown__item"> <span class="dropdown__item--id">2</span> Продукты</span>
+                    <span class="dropdown__item"> <span class="dropdown__item--id">3</span> Проезд</span>
                 </div>
             </section>
         </section>
-
 
         <section class="input">
             <span class="input__title">Описание</span>

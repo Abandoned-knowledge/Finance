@@ -9,7 +9,7 @@ $curUser = unserialize($_COOKIE['user']);
             <!-- <img src="../img/avatar-empty.png" class="profile-settings__image" alt="profile-avatar"> -->
             <img src="<?php echo $curUser["avatar"] ?>" class="profile-settings__image" alt="profile-avatar">
         </div>
-        <input type="text" class="input__content" name="form-avatar" placeholder="Вставьте ссылку на изображение">
+        <input type="text" class="input__content" name="form-avatar" placeholder="Вставьте ссылку на изображение" required>
         
         <button type="submit" class="profile-settings__button">Изменить фотографию</button>
     </form>

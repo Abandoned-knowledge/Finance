@@ -12,7 +12,8 @@ dropdowns.forEach((dropdown) => {
 
   listItems.forEach((item) => {
     item.addEventListener("click", function () {
-      input.value = item.innerText;
+      let text = item.querySelector(".dropdown__item--id");
+      input.value = text.innerText;
       buttonText.innerText = item.innerText;
       dropdown.classList.remove("dropdown_open");
     });
