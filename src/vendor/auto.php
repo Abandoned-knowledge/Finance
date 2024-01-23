@@ -18,9 +18,7 @@ function login($login, $password)
     $stmt = $pdo->prepare("SELECT * FROM users WHERE login = ?");
     $stmt->execute([$login]);
     $user = $stmt->fetch();
-
-    // print_r($user);
-
+    
     if (password_verify($password, $user['password'])) {
 
         $cookie_name = "user";

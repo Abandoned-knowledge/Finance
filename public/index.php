@@ -8,7 +8,11 @@
   </head>
   <body>
     <section class="main-container">
-        <header class="header">
+        <?php
+$curUser = unserialize($_COOKIE['user']); 
+?>
+
+<header class="header">
     <nav class="menu">
         <a href="../pages/expenses.php" class="menu__link nav__link">Расходы</a>
         <a href="../pages/income.php" class="menu__link nav__link">Доходы</a>
@@ -38,7 +42,7 @@
             <article class="nav-profile">
             <section class="nav-profile__main">
                 <div class="nav-profile__avatar">
-                    <img class="nav-profile__image" src="../img/avatar-empty.png" alt="profile-avatar">
+                    <img class="nav-profile__image" src="' . $curUser["avatar"] . '" alt="profile-avatar">
                 </div>
                 <svg class="nav-profile--icon" fill="currentcolor" xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path d="M0.5 2.37868L1.91421 0.964462L7.57107 6.62132L6.15685 8.03553L0.5 2.37868Z" /><path d="M10.3995 0.964462L11.8137 2.37868L6.15685 8.03553L4.74264 6.62132L10.3995 0.964462Z" /></svg>
             </section>
@@ -46,9 +50,9 @@
             <section class="nav-profile__additional">
                 <div class="nav-profile__name">
                     <div class="nav-profile__avatar">
-                        <img class="nav-profile__image" src="../img/avatar-empty.png" alt="profile-avatar">
+                        <img class="nav-profile__image" src="' . $curUser["avatar"] . '" alt="profile-avatar">
                     </div>
-                    Илья Прусикин
+                    ' . $curUser["name"] . " " . $curUser["surname"] . '
                 </div>
                 <a href="../pages/profile.php" class="menu__link menu__link--selected">
                     Редактировать профиль
